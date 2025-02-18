@@ -1,0 +1,63 @@
+% 3.3
+\subsection{$O(N^2)$回の所属性質問による質問学習アルゴリズム}
+線形無順序木パターン$t_*\in {\cal LUTP}_{\Sigma,\Lambda,X}$の所属性質問に答えるオラクルを${\cal O}(t_*)$と書く．アルゴリズム${\cal LUTP}$-${\cal QUERY}_{{\cal O}(t_{\ast})}^{Square}$ (アルゴリズム\ref{alg:lutp-query-square})は，Amoth\cite{amoth-ml2001}により提案されたアルゴリズムを応用したものである．ただし，Amothのアルゴリズムは，頂点を変数とみなす無順序木構造パターンに対するアルゴリズムであるので，辺を変数とみなす本論文の線形無順序木パターンでは，もし$|\Sigma|\not=\infty$かつ$|\Lambda|\not=\infty$ならば，そのままでは正しく動作しない．
+
+$t_*$にマッチする無順序木$T$を入力とする．このとき，${\cal LUTP}$-${\cal QUERY}_{{\cal O}(t_{\ast})}^{Square}$は，もし$|\Sigma|=\infty$または$|\Lambda|=\infty$ならば，線形無順序木パターン$t\in {\cal LUTP}_{\Sigma,\Lambda,X}$で$L(t_*)=L(t)$となる$t$を，${\cal O}(t_*)$に対して$O(N^2)$回の所属性質問を行なって正しく出力することができる．ただし，$N$は$T$の頂点数である．そのときアルゴリズム{\sc Make\_Min\_Pos\_Tree\_Sqr} (アルゴリズム\ref{alg:lutp-query-square-step1})は$t_*$にマッチする$T$を入力とした場合，その出力として，$t_*$と同じ頂点数を持ち，かつ頂点数が最小となる正例を返す．まず$T$のうち，根から最も深い頂点とその頂点に接続する辺を削除し，これを$T'$とする．次に，オラクル${\cal O}(t_*)$に$T'$を問い合わせ，${\cal O}(t_*)(T')=Yes$であれば，$T$を$T'$で更新し，${\cal O}(t_*)(T')=No$であれば，削除した頂点と辺を元に戻す．さらに，処理がいくつか進んだ後に頂点や辺の削除が成功した場合，最も深い頂点から再び順に処理を行う．この操作を再帰的に繰り返し，$T$が変化しなくなると処理を終了する．この処理により，入力された$T$が$t_*$の構造を崩すことなく正確に反映しながら特定していく．その後，頂点数最小となった無順序木$T'$を入力とするとき，もし$|\Sigma|=\infty$または$|\Lambda|=\infty$ならば，アルゴリズム\ref{alg:lutp-query-square-step2} {\sc Variable\_Specify\_Sqr}は$t_*$と同型な$t$を出力する．
+
+具体的には，正例の子の数を$c$とするとき，$T$に現れない頂点ラベルまたは辺ラベルを貼り付けた$c+1$個の辺と頂点(熊手型)を葉に接続し，${\cal O}(t_*)(T')=Yes$であればその葉を端点とする辺を変数に置き換え，${\cal O}(t_*)(T')=No$であれば変数に置き換えず，辺のままとする．このように熊手型を代入することにより変数か否かを決定する．しかし，もし$|\Sigma|\not=\infty$かつ$|\Lambda|\not=\infty$ならば，後述する図\ref{fig:counter_leaf_to_rake}のように変数を同定できないことがある．
+
+% アルゴリズム1
+\begin{algorithm}[tb]
+\caption{{\sc Make\_Min\_Pos\_Tree\_Sqr};} \label{alg:lutp-query-square-step1}
+\begin{algorithmic}[1]
+  \Require{$t_{\ast}\in {\cal LUTP}$の正例$T\in L(t_{\ast})$, $t_{\ast}\in {\cal LUTP}$に対する所属性質問に答えるオラクル${\cal O}(t_{\ast})$;}
+  \Ensure{$T\in L(t_{\ast})$;}
+  \Function{Make\_Min\_Pos\_Tree\_Sqr}{$T$};
+    \State $L\coloneqq T$の葉の集合;
+    \While{$L\not= \emptyset$}
+      \State $T'\coloneqq T$;
+      \State $\ell$を$L$の葉の1つとする;
+      \State $V'$から$\ell$，$E'$から$(p(\ell),\ell)$を削除，ただし$V'$と$E'$は$T'$の頂点集合と辺集合である;
+      \If{${\cal O}(t_{\ast})(T')="Yes"$}
+        \State $T\coloneqq T'$;
+        \State $L\coloneqq T$の葉の集合;
+      \Else
+        \State $L$から$\ell$を削除;
+      \EndIf
+    \EndWhile
+    \State \Return $T$;
+  \EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+% アルゴリズム2
+\begin{algorithm}[tb]
+\caption{{\sc Variable\_Specify\_Sqr};} \label{alg:lutp-query-square-step2}
+\begin{algorithmic}[1]
+  \Require{最小正例$T\in L(t_{\ast})$, $t_{\ast}\in {\cal LUTP}$に対する所属性質問に答えるオラクル${\cal O}(t_{\ast})$;}
+  \Ensure{$t\in {\cal LUTP}$;}
+  \Function{Variable\_Specify\_Sqr}{$T$}
+    \State $L\coloneqq T$の葉の集合; \,$c\coloneqq \max(\deg(T))$;
+    \State$t\coloneqq T$;
+    \For{$\ell\in L$}
+      \State $T'\coloneqq T$の$\ell$に$c+1$個の子を接続;
+      \If{${\cal O}(t_{\ast})(T')="Yes"$}
+        \State $T\coloneqq T'$;
+        \State $T'$の$(p(\ell),\ell)$に対応する$t$の辺ラベルを変数ラベルに更新;
+      \EndIf
+    \EndFor
+    \State \Return $t$;
+  \EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+% アルゴリズム3
+\begin{algorithm}[tb]
+\caption{${\cal LUTP}$-${\cal QUERY}_{{\cal O}(t_{\ast})}^{Square}$} \label{alg:lutp-query-square}
+\begin{algorithmic}[1]
+  \Require{$t_{\ast}\in {\cal LUTP}$の正例$T\in L(t_{\ast})$, $t_{\ast}\in {\cal LUTP}$に対する所属性質問に答えるオラクル${\cal O}(t_{\ast})$;}
+  \Ensure{$t\in {\cal LUTP}$;}
+  \State $T\coloneqq $ \Call{Make\_Min\_Tree\_Sqr}{$T$};
+  \State $t\coloneqq $ \Call{Variable\_Specify\_Sqr}{$T$};
+\end{algorithmic}
+\end{algorithm}

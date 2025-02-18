@@ -1,0 +1,154 @@
+\documentclass[10.5pt, a4paper]{jreport} %jsreport
+
+%\usepackage[margin=30truemm]{geometry}
+\usepackage[top=25truemm,bottom=30truemm,left=30truemm,right=25truemm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{abstract}
+\usepackage{amsthm}
+\usepackage{ulem}
+\usepackage{setspace}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{bm}
+\usepackage{pdfpages}
+%\usepackage{algorithm2e}
+
+\everymath{\displaystyle}
+
+\def\thefootnote{\fnsymbol{footnote}}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{定理}
+\newtheorem{define}{定義}
+\newtheorem{lemma}{補題}
+\newtheorem{step}{Step}
+\newtheorem*{counterexample}{反例}
+\newtheorem{proposition}{命題}
+\newtheorem{corollary}{系}
+
+\renewcommand{\bibname}{参考文献}
+\newcommand{\todayYMD}{\number\year 年\number\month 月\number\day 日}
+\newcommand{\etodayMDY}{\ifcase\month\or
+    January\or February\or March\or April\or May\or June\or
+    July\or August\or September\or October\or November\or December\fi
+    \space\number\day, \space\number\year}
+
+% RequireとEnsureをInputとOutputにする
+\renewcommand{\algorithmicrequire}{\textbf{入力:}}
+\renewcommand{\algorithmicensure}{\textbf{出力:}}
+
+\makeatletter
+\renewcommand{\ALG@name}{アルゴリズム}
+\makeatother
+
+\renewcommand{\proofname}{\textbf{証明}}
+
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+
+% 図表を並べるため
+\makeatletter
+\newcommand{\figcaption}[1]{\def\@captype{figure}\caption{#1}}
+\newcommand{\tblcaption}[1]{\def\@captype{table}\caption{#1}}
+\makeatother
+
+%\pagestyle{fancy}
+%\fancyhead{}
+%\fancyhead[RO,RE]{\thepage}
+%\fancyhead[LE,LO]{\leftmark}
+%\cfoot{}
+%\renewcommand{\chaptermark}[1]{\markboth{第\ \thechapter\ 章~#1}{}}
+
+\begin{document}
+
+% 表紙
+\begin{titlepage}
+  \begin{center}
+    \vspace*{\stretch{1}}
+    {\LARGE 修  士  論  文}\\
+    \vspace{20truemm}
+    {\Huge 線形無順序木パターンに対する\\グラフ畳み込みネットワークをオラクルとする質問学習モデル}\\
+    \vspace{80truemm}
+    {\LARGE 情報工学専攻}\\
+    \vspace{10truemm}
+    {\LARGE FM23102  石灘 洸樹}\\
+    \vspace{10truemm}
+    {\LARGE 指導教員  正代 隆義 教授}\\
+    \vspace{20truemm}
+    {\LARGE \todayYMD}
+    \vspace{10truemm}\\
+    {\LARGE 福岡工業大学 大学院}
+    \vspace{\stretch{1}}
+  \end{center}
+\end{titlepage}
+% ------------------------------
+
+% 要旨
+\input{00abst.tex}
+
+% 目次用のページ番号
+%\setcounter{page}{0}
+%\pagenumbering{roman}
+%\pagestyle{plain}
+
+% 目次
+\setcounter{tocdepth}{2} % subsection表示
+\setcounter{page}{1}
+\pagestyle{plain}
+\setlength{\footskip}{10mm}
+\tableofcontents
+\pagebreak
+
+% 行間調整
+\begin{spacing}{1.3} % 横46x縦36
+
+% 1 序論
+\input{10intro.tex}
+
+% 2 準備
+\input{20prelim.tex}
+
+% 3 理論的解析
+\input{30theory.tex}
+
+% 4 実験的解析
+\input{40experiments.tex}
+
+% 5 バランス化
+\input{50parallel.tex}
+
+% 6 結論
+\input{60concl.tex}
+
+% 7 参考文献
+\input{70refer.tex}
+
+% 謝辞
+\chapter*{謝辞}
+\addcontentsline{toc}{chapter}{謝辞}
+\thispagestyle{empty}
+本研究の遂行にあたり，指導教員として終始多大なるご指導とご助言を賜りました正代隆義教授に，心より深く感謝申し上げます．
+また，本論文の作成に際し，副査として適切なご助言を頂きました馬場謙介教授ならびに宮田考史准教授に，厚く御礼申し上げます．
+広島市立大学の内田智之教授と東海大学の松本哲志教授には，オンラインゼミを通じて大変有意義なコメントを賜りました．ここに深く感謝の意を表します．
+最後に，情報工学科の教職員の皆様には，多岐にわたり貴重なご助言を頂きましたことに感謝いたします．
+
+% 研究業績
+\chapter*{研究業績}
+\addcontentsline{toc}{chapter}{研究業績}
+\thispagestyle{empty}
+
+\section*{国内会議発表}
+\begin{itemize}
+  \item \uline{石灘洸樹}，正代隆義，内田智之，松本哲志，超高精度グラフ畳み込みネットワークをオラクルとする無順序木パターンの質問学習モデル，情報処理学会 第85回全国大会講演論文集，pp373-374(2023)
+  \item \uline{石灘洸樹}，正代隆義，内田智之，松本哲志，無順序木パターンに対する高精度グラフ畳み込みネットワークをオラクルとする質問学習モデルの解析，研究報告数理モデル化と問題解決(MPS)，Vol.2023-MPS-143，No.15，pp.1-8(2023)
+  \item \uline{石灘洸樹}，正代隆義，内田智之，互いに異なる変数ラベルを持つ順序木構造パターンに対する効率のよい並列アルゴリズム，第76回電気・情報関係学会九州支部連合大会論文集，pp.289-290(2023)
+  \item \uline{石灘洸樹}，正代隆義，内田智之，松本哲志，線形回数の所属性質問と1つの正例による無順序木パターン言語族に対する質問学習アルゴリズム，情報科学技術フォーラム講演論文集，pp.77-82(2024)
+\end{itemize}
+
+\end{spacing}
+
+\end{document}

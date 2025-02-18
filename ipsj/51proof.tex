@@ -1,0 +1,300 @@
+%\documentclass[11pt]{jsarticle}
+%\usepackage{amsmath,amssymb}
+%\usepackage[dvipdfmx]{graphicx}
+%
+%\pagestyle{plain}
+%
+%\newtheorem{theorem}{定理}
+%\newtheorem{lemma}{補題}
+%\newtheorem{proposition}{命題}
+%\newtheorem{corollary}{系}
+%\newtheorem{define}{定義}
+%\newtheorem{example}{例}
+%\newenvironment{proof}{\noindent{\bf 証明．}}{\hfill {$\Box$}\par\medskip}
+%
+%\begin{document}
+%\section{バランス化推論システムの理論的解析}
+
+% 5.1.2
+\subsection{根付き2分木のバランス化}
+
+%本章では，無順序木と順序木に共通する性質を議論する．以降，無順序木または順序木をまとめて根付き木とよぶ．根付き木$T$の頂点数および高さを，それぞれ$size(T)$および$height(T)$で表す．任意の根付き木$T$と$T$の頂点$v$に対して，$T(v)$は$v$のすべての子孫からなる$T$の部分木を表す．また，$\overline{T}(v)$は$v$の真の子孫を削除して得られる$T$の部分木を表す．
+
+本項では，バランス化を行うために必要な命題と補題を証明する．
+
+% 命題3
+\begin{proposition}\label{prop:base}
+任意の根付き木$T$には次の2つの条件を満たす頂点$u$が存在する．
+\begin{enumerate}
+  \item[(a)] $\displaystyle size(\overline{T}(u))\leq\left\lceil\frac{1}{3}size(T)\right\rceil$,
+  \item[(b)] $u$が子$w$を持つならば，$\displaystyle size(\overline{T}(w))>\left\lceil\frac{1}{3}size(T)\right\rceil$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+条件(a)を満たす頂点は必ず存在する．たとえば，$r$を$T$の根とすると，$size(\overline{T}(r))=1$であるから，条件(a)はいつでも成り立つ．
+そこで，条件(a)を満たす頂点$u$に対して，次の操作を繰り返す:
+$u$の子$w$で条件(b)が成り立たない頂点が存在すれば，$size(\overline{T}(w))\leq\left\lceil\frac{1}{3}size(T)\right\rceil$であるので，$w$は条件(a)を満たし，さらに$u$より深さが1だけ大きい．そこで，この$w$をあらためて$u$とる．
+条件(a)を満たす$u$が葉であれば，すなわち$u$が子を持たないのであれば，条件(b)は成り立つ．よって，この操作を繰り返せば，深さは有限であるので，条件(a),(b)を満たす頂点$u$を得ることができる．
+\end{proof}
+
+\cite{miyano-parallel1993}の補題8.1(p.246)に誤りがある．その補題の代わりに本項では次の補題を示す．
+
+% 命題4
+\begin{proposition}\label{prop:int1}
+$n\in \mathbb{Z}$に対して，次の等式が成り立つ．
+$$
+  \left\lceil\frac{n}{3}\right\rceil + \left\lfloor\frac{2 n}{3}\right\rfloor = n.
+$$
+\end{proposition}
+
+\begin{proof}
+  \begin{enumerate}
+  \item $n = 3m$ ($m \in \mathbb{Z}$)のとき，
+  $$\left\lceil\frac{3m}{3}\right\rceil + \left\lfloor\frac{2\cdot 3m}{3}\right\rfloor = m + 2m = 3 m = n.$$
+  \item $n = 3m + \ell$ ($m \in \mathbb{Z}$, $\ell = 1,2$)のとき，
+  $$\left\lceil\frac{km+\ell}{k}\right\rceil + \left\lfloor\frac{(k-1)(km+\ell)}{k}\right\rfloor = m + 1 + (k-1)m + \ell - 1 = k m + \ell = n.$$
+  \end{enumerate}
+  以上より，与式が成り立つ．
+\end{proof}
+
+% 命題5
+\begin{proposition}\label{prop:int2}
+  $n\in \mathbb{Z}$に対して，次の不等式が成り立つ．
+  $$
+  \left\lceil\frac{2n}{3}\right\rceil \geq
+  n - \left\lceil\frac{2n}{3}\right\rceil + \left\lceil\frac{n}{3}\right\rceil.
+  $$
+\end{proposition}
+  
+\begin{proof}
+  \begin{enumerate}
+    \item $n = 3m$ ($m \in \mathbb{Z}$)のとき，
+    \begin{align*}
+    \mbox{左辺} & = \left\lceil\frac{6 m}{3}\right\rceil = 2m,\\
+    \mbox{右辺} & = 3 m - \left\lceil\frac{6 m}{3}\right\rceil + \left\lceil\frac{3 m}{3}\right\rceil = 3m - 2m + m = 2m.
+    \end{align*}
+    \item $n = 3m + 1$ ($m \in \mathbb{Z}$)のとき，
+    \begin{align*}
+    \mbox{左辺} & = \left\lceil\frac{2(3 m + 1)}{3}\right\rceil = 2m + 1,\\
+    \mbox{右辺} & = 3 m + 1 - \left\lceil\frac{2(3 m + 1)}{3}\right\rceil + \left\lceil\frac{3 m + 1}{3}\right\rceil
+    = 3 m + 1 - (2m + 1) + m + 1 = 2m + 1.
+    \end{align*}
+    \item $n = 3m + 2$ ($m \in \mathbb{Z}$)のとき，
+    \begin{align*}
+    \mbox{左辺} & = \left\lceil\frac{2(3 m + 2)}{3}\right\rceil = 2m + 2,\\
+    \mbox{右辺} & = 3 m + 2 - \left\lceil\frac{2(3 m + 2)}{3}\right\rceil + \left\lceil\frac{3 m + 2}{3}\right\rceil
+    = 3 m + 2 - (2m + 2) + m + 1 = 2m + 1.
+    \end{align*}
+  \end{enumerate}
+  以上より，いずれの場合も$\mbox{左辺}\geq\mbox{右辺}$が成り立つ．
+\end{proof}
+
+% 補題4
+\begin{lemma}\label{lem:base}
+  任意の根付き2分木$T$には次の2つの条件を満たす頂点$v$が存在する．
+  \begin{enumerate}
+    \item[(1)] $\displaystyle size(T(v))\leq\left\lceil\frac{2}{3}size(T)\right\rceil$,\smallskip
+    \item[(2)] $\displaystyle size(\overline{T}(v))\leq\left\lceil\frac{2}{3}size(T)\right\rceil + 1$.
+  \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+  $T$には命題\ref{prop:base}の条件(a),(b)を満たす頂点$u$が存在する．
+  \begin{enumerate}
+  \item $u$が子を持たないとき($u$が葉のとき): $\overline{T}(u)=T$であるから，命題\ref{prop:base}の条件(a)より，
+$$size(T)\leq\left\lceil\frac{1}{3}size(T)\right\rceil$$となる．これより$size(T)=1$が得られる．すなわち，$u$は$T$の唯一の頂点であり，この$u$を$v$とすることで，条件(1),(2)を満たす．
+
+\item $u$が1つの子$w$を持つとき:
+$w$が条件(1),(2)の$v$になることを示す．
+命題\ref{prop:base}の条件(b)より，
+$$size(\overline{T}(w))>\left\lceil\frac{1}{3}size(T)\right\rceil.$$
+$size(T(w)) + size(\overline{T}(w)) = size(T) + 1$より，
+$$size(T(w)) = size(T) - size(\overline{T}(w)) + 1
+< size(T) - \left\lceil\frac{1}{3}size(T)\right\rceil + 1.$$
+この不等式はすべて整数の項から成るので，次の不等式が得られる．
+$$size(T(w)) \leq size(T) - \left\lceil\frac{1}{3}size(T)\right\rceil.$$
+命題\ref{prop:int1}より，
+$$size(T(w)) \leq \left\lfloor\frac{2}{3}size(T)\right\rfloor
+\leq\left\lceil\frac{2}{3}size(T)\right\rceil.$$
+以上より，$w$が条件(1)を満たすことが示された．次に$w$に対して，
+条件(2)が成り立たないとして矛盾を導く．具体的には，次の不等式(i)が成り立つと仮定する．
+\begin{align*}
+size(\overline{T}(w))&>\left\lceil\frac{2}{3}size(T)\right\rceil + 1.\tag{i}
+\end{align*}
+$size(T(w)) + size(\overline{T}(w)) = size(T) + 1$と不等式(i)より，
+\begin{align*}
+size(T(w)) = size(T) + 1 - size(\overline{T}(w)) < size(T) - \left\lceil\frac{2}{3}size(T)\right\rceil.\tag{ii}
+\end{align*}
+したがって，不等式(i)と(ii)，命題\ref{prop:base}の条件(a)より，
+$$
+\left\lceil\frac{2}{3}size(T)\right\rceil < size(\overline{T}(w_{1})) - 1
+  = (size(\overline{T}(u)) + 1) - 1
+  = size(\overline{T}(u))
+  < \left\lceil\frac{1}{3}size(T)\right\rceil.
+$$
+これは自然数の大小関係に矛盾する．以上より，$w$が条件(2)も満たすことが示された．
+
+\item $u$が2つの子$w_{1},w_{2}$を持つとき: $size(T(w_{1}))\geq size(T(w_{2}))$として一般性を失わない．
+$w_{1}$が条件(1),(2)の$v$になることを示す．
+命題\ref{prop:base}の条件(b)より，
+$$size(\overline{T}(w_{1}))>\left\lceil\frac{1}{3}size(T)\right\rceil.$$
+$size(T(w_{1})) + size(\overline{T}(w_{1})) = size(T) + 1$より，
+$$size(T(w_{1})) = size(T) - size(\overline{T}(w_{1})) + 1
+< size(T) - \left\lceil\frac{1}{3}size(T)\right\rceil + 1.$$
+この不等式はすべて整数の項から成るので，次の不等式が得られる．
+$$size(T(w_{1})) \leq size(T) - \left\lceil\frac{1}{3}size(T)\right\rceil.$$
+命題\ref{prop:int1}より，
+$$size(T(w_{1})) \leq \left\lfloor\frac{2}{3}size(T)\right\rfloor
+\leq\left\lceil\frac{2}{3}size(T)\right\rceil.$$
+以上より，$w_{1}$が条件(1)を満たすことが示された．次に$w_{1}$に対して，
+条件(2)が成り立たないとして矛盾を導く．具体的には，次の不等式(iii)が成り立つと仮定する．
+\begin{align*}
+size(\overline{T}(w_{1}))&>\left\lceil\frac{2}{3}size(T)\right\rceil + 1.\tag{iii}
+\end{align*}
+$size(T(w_{1})) + size(\overline{T}(w_{1})) = size(T) + 1$と不等式(iii)より，
+\begin{align*}
+size(T(w_{1})) = size(T) + 1 - size(\overline{T}(w_{1})) < size(T) - \left\lceil\frac{2}{3}size(T)\right\rceil.
+\end{align*}
+$size(T(w_{1}))\geq size(T(w_{2}))$としたので，次の不等式が得られる．
+\begin{align*}
+size(T(w_{2})) < size(T) - \left\lceil\frac{2}{3}size(T)\right\rceil.\tag{iv}
+\end{align*}
+したがって，不等式(iii)と(iv)，命題\ref{prop:base}の条件(a)より，
+\begin{align*}
+  \left\lceil\frac{2}{3}size(T)\right\rceil & < size(\overline{T}(w_{1})) - 1\\
+  & = (size(T(w_{2})) + size(\overline{T}(u)) + 1) - 1\\
+  & = size(T(w_{2})) + size(\overline{T}(u))\\
+  & < size(T) - \left\lceil\frac{2}{3}size(T)\right\rceil + \left\lceil\frac{1}{3}size(T)\right\rceil
+  \end{align*}
+これは命題\ref{prop:int2}に矛盾する．以上より，$w_{1}$が条件(2)も満たすことが示された．
+\end{enumerate}
+\end{proof}
+
+% 命題6
+\begin{proposition}\label{prop:int3}
+$n\in\mathbb{N}$に対して，$n\geq 18$のとき，次の不等式が成り立つ．
+$$
+\left\lceil\frac{2}{3}n\right\rceil + 1 \leq \frac{3}{4}n.
+$$
+\end{proposition}
+\begin{proof}
+$\displaystyle S = \frac{3}{4}n - \left\lceil\frac{2}{3}n\right\rceil - 1$とおく．
+\begin{enumerate}
+\item $n = 12 m + 3 m^{\prime}$ $(m, m^{\prime} \in \mathbb{Z}, 0\leq m^{\prime} \leq 3)$のとき，
+$$S = \frac{3}{4}(12 m + 3 m^{\prime}) - \left\lceil\frac{2}{3}(12 m + 3 m^{\prime})\right\rceil - 1
+ = m + \frac{1}{4}m^{\prime} - 1.$$
+したがって，$m\geq 1, 0\leq m^{\prime} \leq 3$のとき，$S \geq 0$である．
+\item $n = 12 m + 3 m^{\prime} + 1$ $(m, m^{\prime} \in \mathbb{Z}, 0\leq m^{\prime} \leq 3)$のとき，
+$$S = \frac{3}{4}(12 m + 3 m^{\prime} + 1) - \left\lceil\frac{2}{3}(12 m + 3 m^{\prime} + 1)\right\rceil - 1
+ = m + \frac{1}{4}m^{\prime} - \frac{5}{4}.$$
+したがって，$(m,m^{\prime}) = (1, 1), (1, 2), (1, 3)$ 及び $m \geq 2, 0\leq m^{\prime} \leq 3$のとき，$S \geq 0$である．
+\item $n = 12 m + 3 m^{\prime} + 2$ $(m, m^{\prime} \in \mathbb{Z}, 0\leq m^{\prime} \leq 3)$のとき，
+$$S = \frac{3}{4}(12 m + 3 m^{\prime} + 2) - \left\lceil\frac{2}{3}(12 m + 3 m^{\prime} + 2)\right\rceil - 1
+ = m + \frac{1}{4}m^{\prime} - \frac{3}{2}.$$
+したがって，$(m,m^{\prime}) = (1, 2), (1, 3)$ 及び $m \geq 2, 0\leq m^{\prime} \leq 3$のとき，$S \geq 0$である．
+\end{enumerate}
+以上より，$n\geq 18$のとき$S > 0$となる．したがって本命題が成り立つ．
+\end{proof}
+
+% 系1
+\begin{corollary}\label{cor:1}
+  根付き2分木$T$が$size(T)\geq 18$であるとき，$T$には次の2つの条件を満たす頂点$v$が存在する．
+  \begin{enumerate}
+  \item[(1)] $\displaystyle size(T(v)) < \frac{3}{4}size(T)$,\smallskip
+  \item[(2)] $\displaystyle size(\overline{T}(v)) < \frac{3}{4}size(T)$.
+  \end{enumerate}
+\end{corollary}
+
+\begin{proof}
+補題\ref{lem:base}と命題\ref{prop:int3}から示される．
+\end{proof}
+
+% 5.1.2
+\subsection{バランス化推論システムの高さに関する定理}
+% 命題7
+\begin{proposition}\label{prop:main}
+  $a \geq 2$ $(a\in\mathbb{N})$に対して，$H:\mathbb{N}\rightarrow \mathbb{R}$を次の性質を持つ関数とする．
+$$H(n) \leq 
+\begin{cases}
+n & (1\leq n \leq 17),\\
+H(\frac{3}{4}n) + a & (n\geq 18).
+\end{cases}
+$$
+  このとき，$n\geq 18$に対して，次の不等式が成り立つ．
+  $$
+  H(n) < \frac{a}{\log_{2}\frac{4}{3}} \log_{2} n.
+  $$
+\end{proposition}
+
+\begin{proof}
+$\ell \in \mathbb{N}$に対して，
+$$
+H(n) \leq H\left(\left(\frac{3}{4}\right)^{\ell}n\right) + \ell\cdot a
+$$
+が成り立つ．$\left(\frac{3}{4}\right)^{\ell}n\leq 17$を$\ell$に関して解くと，
+$\displaystyle\ell\geq \frac{\log_{2}n - \log_{2}17}{\log_{2}\frac{4}{3}}$を得る．
+したがって，$\log_{2}17 \leq 4.0875$であること，さらに$a\geq 2$に対して，$\displaystyle\frac{a\log_{2}17}{\log_{2}\frac{4}{3}} > 19$であることから，
+\begin{align*}
+H(n) & \leq 17 + \frac{\log_{2}n - \log_{2}17}{\log_{2}\frac{4}{3}}\cdot a
+ = \frac{a}{\log_{2}\frac{4}{3}}\log_{2}n + 17 - \frac{a\log_{2}17}{\log_{2}\frac{4}{3}} < \frac{a}{\log_{2}\frac{4}{3}} \log_{2} n
+\end{align*}
+が得られる．
+\end{proof}
+
+% 系2
+\begin{corollary}\label{cor:2}
+  $H:\mathbb{N}\rightarrow \mathbb{R}$を次の性質を持つ関数とする．
+$$H(n) \leq 
+\begin{cases}
+n & (1\leq n \leq 17),\\
+H(\frac{3}{4}n) + 3 & (n\geq 18).
+\end{cases}
+$$
+このとき，次の不等式が成り立つ．
+$$H(n) \leq 
+\begin{cases}
+1 & (n = 1),\\
+7 \log_{2}n & (n\geq 2).
+\end{cases}
+$$
+\end{corollary}
+
+\begin{proof}
+$0.4150 < \log_{2}\frac{4}{3} < 0.4151$であること，
+$2\leq n\leq 17$に対して$n \leq 7\log_{2}n$であることから，命題\ref{prop:main}より本系が得られる．
+\end{proof}
+
+%%%%%
+% もっと係数が小さくならないか試しに計算してみただけなので削除して良いです．
+% 考察内の$k$を大きくすれば，係数は小さくなると思います．
+% ただし，その係数を持つ$H(n)$の評価を満たす$n$が$k^2$に比例して大きくなります．
+% したがって，あまりメリットはないと結論しました．
+%%%%
+\if0
+\subsection*{考察}
+
+\begin{proposition}\label{prop:int4}
+  $n, k\in\mathbb{N}$に対して，$n\geq 3k(2k + 1)$のとき，次の不等式が成り立つ．
+  $$
+  \left\lceil\frac{2}{3}n\right\rceil + 1 < \frac{2k+1}{3k}n.
+  $$
+  \end{proposition}
+  \begin{proof}
+  $\displaystyle S = \frac{2k+1}{3k}n - \left\lceil\frac{2}{3}n\right\rceil - 1$とおく．
+  $n = 3k m + \ell$ $(m \in \mathbb{Z}, 0\leq \ell < 3k)$のとき，
+  \begin{align*}
+  S & = \frac{2k + 1}{3k}(3k m + \ell) - \left\lceil\frac{2}{3}(3k m + \ell)\right\rceil - 1\\
+  & = (2k + 1)m + \frac{2k + 1}{3k}\cdot\ell - (2k m + \left\lceil\frac{2}{3}\ell\right\rceil) - 1\\
+  &= m + \frac{2k + 1}{3k}\cdot\ell - \left\lceil\frac{2}{3}\ell\right\rceil - 1\\
+  &\geq m + \frac{2k + 1}{3k}\cdot\ell - \left\lceil\frac{2}{3}(3k - 1)\right\rceil - 1\\
+  &\geq m + \frac{2k + 1}{3k}\cdot\ell - 2k - 1\\
+  &= m - \frac{(2k + 1)(3k - \ell)}{3k}\\
+  &\geq m - (2k + 1).
+  \end{align*}
+  したがって，$m\geq 2k + 1$のとき，$S \geq 0$である．
+  以上より，$n\geq 3k(2k + 1)$のとき，本命題が成り立つ．$k=2$のとき，$n\geq 30$である．
+  \end{proof}
+\fi
+%%%%
+%\end{document}
