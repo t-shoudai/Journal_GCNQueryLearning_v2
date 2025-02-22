@@ -399,9 +399,6 @@ INPUT fig/fig-qltimes_input_twice.eps
 INPUT ./40experiments.tex
 INPUT ./40experiments.tex
 INPUT 40experiments.tex
-INPUT ./41gnn.tex
-INPUT ./41gnn.tex
-INPUT 41gnn.tex
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm
