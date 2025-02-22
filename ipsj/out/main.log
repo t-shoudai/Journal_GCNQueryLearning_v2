@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.1-u1.30-230214-2.6 (utf8.euc) (TeX Live 2024) (preloaded format=platex 2025.2.17)  19 FEB 2025 21:24
+This is e-upTeX, Version 3.141592653-p4.1.1-u1.30-230214-2.6 (utf8.euc) (TeX Live 2024) (preloaded format=platex 2025.2.17)  22 FEB 2025 13:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -305,65 +305,65 @@ LaTeX Font Info:    ... okay on input line 55.
 LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 55.
 LaTeX Font Info:    ... okay on input line 55.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <8.8711> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 76.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 73.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <8.8711> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 76.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 73.
 LaTeX Font Info:    Font shape `JT1/mc/m/it' in size <8.5373> not available
-(Font)              Font shape `JT1/mc/m/n' tried instead on input line 84.
+(Font)              Font shape `JT1/mc/m/n' tried instead on input line 81.
 LaTeX Font Info:    Font shape `JY1/mc/m/it' in size <8.5373> not available
-(Font)              Font shape `JY1/mc/m/n' tried instead on input line 84.
+(Font)              Font shape `JY1/mc/m/n' tried instead on input line 81.
 LaTeX Font Info:    Font shape `JT1/mc/bx/it' in size <8.5373> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 84.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 81.
 LaTeX Font Info:    Font shape `JY1/mc/bx/it' in size <8.5373> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 84.
-LaTeX Font Info:    Calculating math sizes for size <8.5373> on input line 85.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 81.
+LaTeX Font Info:    Calculating math sizes for size <8.5373> on input line 82.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8.5373> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 85.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 82.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5.97607> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 85.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 82.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <4.26865> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 85.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 82.
 LaTeX Font Info:    Font shape `JT1/gt/bx/n' in size <19.2207> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 92.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 89.
 LaTeX Font Info:    Font shape `JY1/gt/bx/n' in size <19.2207> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 92.
-LaTeX Font Info:    Calculating math sizes for size <9.61035> on input line 92.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 89.
+LaTeX Font Info:    Calculating math sizes for size <9.61035> on input line 89.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <9.61035> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 92.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 89.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6.7272> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 92.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 89.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <4.80518> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 92.
-LaTeX Font Info:    Calculating math sizes for size <11.82813> on input line 92.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 89.
+LaTeX Font Info:    Calculating math sizes for size <11.82813> on input line 89.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8.27965> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 92.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 89.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5.91406> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 92.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 89.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.22882> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 92.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 89.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.22882> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 92.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 89.
 LaTeX Font Info:    Font shape `JT1/mc/m/sc' in size <10.34961> not available
-(Font)              Font shape `JT1/mc/m/n' tried instead on input line 92.
+(Font)              Font shape `JT1/mc/m/n' tried instead on input line 89.
 LaTeX Font Info:    Font shape `JY1/mc/m/sc' in size <10.34961> not available
-(Font)              Font shape `JY1/mc/m/n' tried instead on input line 92.
-LaTeX Font Info:    Calculating math sizes for size <10.34961> on input line 92.
+(Font)              Font shape `JY1/mc/m/n' tried instead on input line 89.
+LaTeX Font Info:    Calculating math sizes for size <10.34961> on input line 89.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7.24469> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 92.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 89.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5.1748> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 92.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 89.
 LaTeX Font Info:    Font shape `JT1/mc/m/sc' in size <7.24469> not available
-(Font)              Font shape `JT1/mc/m/n' tried instead on input line 92.
+(Font)              Font shape `JT1/mc/m/n' tried instead on input line 89.
 LaTeX Font Info:    Font shape `JY1/mc/m/sc' in size <7.24469> not available
-(Font)              Font shape `JY1/mc/m/n' tried instead on input line 92.
-LaTeX Font Info:    Calculating math sizes for size <8.13184> on input line 92.
+(Font)              Font shape `JY1/mc/m/n' tried instead on input line 89.
+LaTeX Font Info:    Calculating math sizes for size <8.13184> on input line 89.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8.13184> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 92.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 89.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5.69225> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 92.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 89.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <4.06592> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 92.
-(./10intro.tex
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 89.
+(./101intro.tex
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <11.82813> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 3.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <11.82813> not available
@@ -373,15 +373,15 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <11.82813> not available
 
 
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <9.24873> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 5.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 7.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9.24873> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 5.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 7.
 (I search kanjifont definition file: . . ) (I search font definition file: . . . . . . . )
-LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 5.
+LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 7.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 5.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 7.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) [1
@@ -392,18 +392,17 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 File: fig/fig-relation.eps Graphic file (type eps)
 <fig/fig-relation.eps>
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <8.13184> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 22.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <8.13184> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 22.
-
-
-[2]) (./20prelim.tex
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 28.
+) (./20prelim.tex
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <9.61035> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 6.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9.61035> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 6.
 
 
+[2]
 File: fig/fig-sibling_relationship.eps Graphic file (type eps)
 <fig/fig-sibling_relationship.eps>) (./21unordered.tex
 LaTeX Font Info:    Font shape `JT1/mc/m/it' in size <9.61035> not available
@@ -412,7 +411,6 @@ LaTeX Font Info:    Font shape `JY1/mc/m/it' in size <9.61035> not available
 (Font)              Font shape `JY1/mc/m/n' tried instead on input line 6.
 
 
-[3]
 File: fig/fig-variable.eps Graphic file (type eps)
 <fig/fig-variable.eps>
 Overfull \hbox (8.78346pt too wide) in paragraph at lines 30--31
@@ -425,10 +423,10 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/it' in size <9.61035> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 38.
 
 
+[3]
 File: fig/fig-lutp.eps Graphic file (type eps)
 <fig/fig-lutp.eps>
 
-[4]
 File: fig/fig-left_dfs.eps Graphic file (type eps)
 <fig/fig-left_dfs.eps>) (./23ql_model.tex
 File: fig/fig-ql.eps Graphic file (type eps)
@@ -439,11 +437,11 @@ Overfull \hbox (4.67458pt too wide) in paragraph at lines 10--11
 
 ) (./30theory.tex
 
+[4]
 
+) (./301proof.tex
 
-[5]) (./301proof.tex
-
-
+[5]
 Underfull \hbox (badness 4913) in paragraph at lines 25--26
 $\OML/cmm/m/it/9.61035 S[] \OT1/cmr/m/n/9.61035 = \OMS/cmsy/m/n/9.61035 f\OML/cmm/m/it/9.61035 T[]; T[]; [] ; T[]\OMS/cmsy/m/n/9.61035 g ^^R [][]$\JY1/mc/m/n/9.61035 ， $\OML/cmm/m/it/9.61035 S[] \OT1/cmr/m/n/9.61035 =
  []
@@ -459,24 +457,24 @@ File: fig/clause-tree.eps Graphic file (type eps)
 File: fig/example_npc.eps Graphic file (type eps)
 <fig/example_npc.eps>
 
+
+
 [6]
 
 ) (./31alg_sqr.tex
-
-[7]
 LaTeX Font Info:    Font shape `JT1/mc/m/sc' in size <9.61035> not available
 (Font)              Font shape `JT1/mc/m/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `JY1/mc/m/sc' in size <9.61035> not available
 (Font)              Font shape `JY1/mc/m/n' tried instead on input line 5.
+
+
+[7]
 LaTeX Font Info:    Font shape `JT1/mc/m/sc' in size <8.13184> not available
 (Font)              Font shape `JT1/mc/m/n' tried instead on input line 15.
 LaTeX Font Info:    Font shape `JY1/mc/m/sc' in size <8.13184> not available
 (Font)              Font shape `JY1/mc/m/n' tried instead on input line 15.
 ) (./32alg_ln.tex
 
-
-
-[8]
 
 LaTeX Font Warning: Font shape `JY1/mc/m/scit' undefined
 (Font)              using `JY1/mc/m/sc' instead on input line 49.
@@ -486,12 +484,13 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
 (Font)              using `OT1/cmr/m/sc' instead on input line 49.
 
 
-
-
 Underfull \hbox (badness 7667) in paragraph at lines 66--67
 []$\OMS/cmsy/m/n/9.61035 9\OML/cmm/m/it/9.61035 ^^R \OMS/cmsy/m/n/9.61035 2 \OT1/cmr/m/n/9.61035 ^^B[](\OML/cmm/m/it/9.61035 T[]\OT1/cmr/m/n/9.61035 )\OMS/cmsy/m/n/9.61035 8\OML/cmm/m/it/9.61035 v \OMS/cmsy/m/n/9.61035 2 [][] \OML/cmm/m/it/9.61035 V[]\OT1/cmr/m/n/9.61035 (\OML/cmm/m/it/9.61035 T[]\OT1/cmr/m/n/9.61035 )[[] \OMS/cmsy/m/n/9.61035 2
  []
 
+
+
+[8]
 
 LaTeX Font Warning: Font shape `JY1/mc/m/scit' undefined
 (Font)              using `JY1/mc/m/sc' instead on input line 108.
@@ -518,13 +517,14 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
 
 
 
-[9]
+
 Underfull \hbox (badness 10000) in paragraph at lines 130--131
 [] $\OML/cmm/m/it/8.13184 c[]; [] ; c[]\OT1/cmr/m/n/8.13184 (\OML/cmm/m/it/8.13184 c \OMS/cmsy/m/n/8.13184 ^^U \OT1/cmr/m/n/8.13184 2) [][]= \OML/cmm/m/it/8.13184 v$ \JY1/mc/m/n/8.13184 の子 ， ただし ，
  []
 
 
 
+[9]
 
 LaTeX Font Warning: Font shape `JY1/mc/m/scit' undefined
 (Font)              using `JY1/mc/m/sc' instead on input line 155.
@@ -548,28 +548,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 168--174
 
 
 
-[10]
 
+
+[10]
 File: fig/fig-counter_leaf_to_rake.eps Graphic file (type eps)
 <fig/fig-counter_leaf_to_rake.eps>
-
-[11]
 File: fig/fig-counter_step1_2.eps Graphic file (type eps)
 <fig/fig-counter_step1_2.eps>
+
 File: fig/fig-counter_ldfs_tree.eps Graphic file (type eps)
 <fig/fig-counter_ldfs_tree.eps>
+
+[11]
 
 
 
 [12]
-
-
-
-[13]
 File: fig/fig-qltimes_input_min.eps Graphic file (type eps)
 <fig/fig-qltimes_input_min.eps>
 File: fig/fig-qltimes_max_min.eps Graphic file (type eps)
 <fig/fig-qltimes_max_min.eps>
+
 File: fig/fig-qltimes_input_twice.eps Graphic file (type eps)
 <fig/fig-qltimes_input_twice.eps>) (./40experiments.tex
 Underfull \hbox (badness 10000) in paragraph at lines 12--12
@@ -578,12 +577,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--12
 
 
 
-
-
-[14]
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 18--18
 [][]$\OT1/cmtt/m/n/8.13184 https : / / pytorch-[]geometric . readthedocs . io / en / 2 . 5 . 3 /
  []
+
+
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 24--24
@@ -592,20 +591,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--24
 
 
 
+[14]
 
-Overfull \vbox (10.2556pt too high) has occurred while \output is active []
-
-
-
-[15]
 File: fig/fig-ql_oracle.eps Graphic file (type eps)
 <fig/fig-ql_oracle.eps>
 File: fig/fig-ql_gcn.eps Graphic file (type eps)
 <fig/fig-ql_gcn.eps>
 
+[15]
 
 
-[16]
 Underfull \hbox (badness 10000) in paragraph at lines 166--167
 []$\OML/cmm/m/it/8.13184 F[] [][]\OT1/cmr/m/n/8.13184 = [][] \OML/cmm/m/it/8.13184 F[]$\OT1/cmr/m/n/8.13184 , $\OML/cmm/m/it/8.13184 F[] [][]\OT1/cmr/m/n/8.13184 =
  []
@@ -617,6 +612,8 @@ File: fig/fig-exp_RGCNConv.eps Graphic file (type eps)
 File: fig/fig-exp_GCNConv.eps Graphic file (type eps)
 <fig/fig-exp_GCNConv.eps>
 
+[16]
+
 
 
 [17]
@@ -624,7 +621,6 @@ File: fig/fig-exp_GCNConv.eps Graphic file (type eps)
 
 
 [18]
-
 File: fig/fig-GraphConv_ln_ql_f1_nodes.eps Graphic file (type eps)
 <fig/fig-GraphConv_ln_ql_f1_nodes.eps>
 File: fig/fig-GraphConv_sqr_ql_f1_nodes.eps Graphic file (type eps)
@@ -637,6 +633,8 @@ File: fig/fig-GCNConv_ln_ql_f1_nodes.eps Graphic file (type eps)
 <fig/fig-GCNConv_ln_ql_f1_nodes.eps>
 File: fig/fig-GCNConv_sqr_ql_f1_nodes.eps Graphic file (type eps)
 <fig/fig-GCNConv_sqr_ql_f1_nodes.eps>) (./60concl.tex
+
+
 
 [19]
 
@@ -652,13 +650,11 @@ File: fig/fig-GCNConv_sqr_ql_f1_nodes.eps Graphic file (type eps)
 
 [22]
 
-
+)
 
 [23]
 
-)
-
-[24] (./60ack.tex) (./70refer.tex
+(./60ack.tex) (./70refer.tex
 LaTeX Font Info:    Calculating math sizes for size <8.8711> on input line 1.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8.8711> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 1.
@@ -673,9 +669,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--55
 
 
 
-)
+[24])
 
-[25] (out/main.aux)
+
+
+[25
+
+] (out/main.aux)
  ***********
 pLaTeX2e <2023-02-14>+1, based on
 LaTeX2e <2024-11-01> patch level 2
@@ -684,11 +684,11 @@ L3 programming layer <2025-01-18>
  ) 
 Here is how much of TeX's memory you used:
  5436 strings out of 473863
- 85703 string characters out of 5731558
- 534305 words of memory out of 5000000
+ 85732 string characters out of 5731558
+ 530229 words of memory out of 5000000
  28539 multiletter control sequences out of 15000+600000
  623756 words of font info for 311 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 57i,11n,65p,193164b,531s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,11n,65p,193164b,573s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/main.dvi (25 pages, 224916 bytes).
+Output written on out/main.dvi (25 pages, 219196 bytes).

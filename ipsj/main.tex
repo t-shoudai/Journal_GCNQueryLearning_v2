@@ -25,7 +25,7 @@
 %\再受付{2015}{7}{16}   %省略可能
 %\再再受付{2015}{7}{20} %省略可能
 %\再再受付{2015}{11}{20} %省略可能
-%\採録{2016}{8}{1}
+\採録{2026}{3}{1}
 
 
 \newtheorem{theorem}{定理}
@@ -57,21 +57,18 @@
 \title{線形無順序木パターンに対するグラフ畳み込みネットワークをオラクルとする質問学習モデル}
 \etitle{Query Learning Model With a Graph Convolutional Network As an Oracle For Linear Unordered Tree Patterns}
 
-\affiliate{FITGS}{福岡工業大学大学院工学研究科情報工学専攻\\
-Department of Computer Science and Engineering, Fukuoka Institute of
-Technology, 3-30-1 Wajiro-higashi, Higashi-ku, Fukuoka 811-0295、 Japan}
-\affiliate{FIT}{福岡工業大学情報工学部情報工学科\\
-Department of Computer Science and Engineering, Fukuoka Institute of
-Technology}
-\affiliate{HCU}{広島市立大学大学院情報科学研究科知能工学専攻\\
-Graduate School of Infomation Sciences, Hiroshima City University}
-\affiliate{TU}{東海大学理学部情報数理学科\\
-Department of Mathematical Sciences, Tokai University}
+\affiliate{FITGS-full}{福岡工業大学大学院工学研究科情報工学専攻\\Department of Computer Science and Engineering, Fukuoka Institute of Technology, 3-30-1 Wajiro-higashi, Higashi-ku, Fukuoka 811-0295, Japan}
+%\affiliate{FIT-full}{福岡工業大学情報工学部情報工学科\\Department of Computer Science and Engineering, Fukuoka Institute of Technology}
+\affiliate{FIT-short}{福岡工業大学情報工学部, Fukuoka Institute of Technology}
+%\affiliate{HCU-full}{広島市立大学大学院情報科学研究科知能工学専攻\\Graduate School of Infomation Sciences, Hiroshima City University}
+\affiliate{HCU-short}{広島市立大学大学院情報科学研究科, Hiroshima City University}
+%\affiliate{TU-full}{東海大学理学部情報数理学科\\Department of Mathematical Sciences, Tokai University}
+\affiliate{TU-short}{東海大学理学部, Tokai University}
 
-\author{石灘 洸樹}{Hiroki Ishinada}{FITGS}[mfm23102@bene.fit.ac.jp]
-\author{正代 隆義}{Takayoshi Shoudai}{FIT}[shodai@fit.ac.jp]
-\author{内田 智之}{Tomoyuki Uchida}{HCU}[uchida@hiroshima-cu.ac.jp]
-\author{松本 哲志}{Satoshi Matsumoto}{TU}[matsumoto@tokai.ac.jp]
+\author{石灘 洸樹}{Hiroki Ishinada}{FITGS-full}[mfm23102@bene.fit.ac.jp]
+\author{正代 隆義}{Takayoshi Shoudai}{FIT-short}[shodai@fit.ac.jp]
+\author{内田 智之}{Tomoyuki Uchida}{HCU-short}[uchida@hiroshima-cu.ac.jp]
+\author{松本 哲志}{Satoshi Matsumoto}{TU-short}[matsumoto@tokai.ac.jp]
 
 \begin{abstract}
 	質問学習モデルは常に正しい答えを返すオラクルを仮定する計算論的学習モデルである．本論文では，無順序木パターンのための学習済みグラフ畳み込みネットワーク(GCN)をオラクルとする質問学習モデルを導入する．また，一つの正例とそのサイズに比例した回数の所属性質問を用いる新たな質問学習アルゴリズムを提案する．GCNをオラクルとする本モデルは正しいパターンの出力を保証するものではないため，グラフ畳み込み層や質問学習アルゴリズムの適切な選択が精度向上のために重要となる．本モデルの有効性を複数のグラフ畳み込み層と質問学習アルゴリズムを組み合わせた人工データによる計算機実験で検証したので，その結果を報告する．
@@ -92,7 +89,7 @@ Department of Mathematical Sciences, Tokai University}
 \maketitle
 
 % 1 序論
-\input{10intro.tex}
+\input{101intro.tex}
 
 % 2 準備
 \input{20prelim.tex}
