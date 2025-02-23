@@ -1,0 +1,59 @@
+% 3
+%\chapter{線形無順序木パターンの質問学習}
+\section{線形無順序木パターンの質問学習}
+
+%2023年6月29日木曜日から7月1日土曜日まで沖縄科学技術大学院大学カンファレンス・センターにて行われた第143回数理モデル化と問題解決(MPS)と，2024年9月4日水曜日から9月6日金曜日まで広島工業大学五日市キャンパスにて行われた第23回情報科学技術フォーラム(FIT2024)で口頭発表を行った内容である．
+
+% 3.1
+\subsection{無順序木パターン言語の計算問題}
+本章では，線形無順序木パターンの計算問題の時間計算量について述べる．
+無順序項木パターン$t\in{\cal UTTP}_{\Sigma,\Lambda,X}$と無順序木$T=(V_T,E_T)$が与えられたとき，$T\in L(t)$か否かを決定する問題を次のように定義する．
+
+\medskip
+\noindent
+\textbf{無順序項木パターン照合問題}(${\cal UTTP}$-${\cal MP}$)\\
+\textbf{入力}: 無順序項木パターン$t\in {\cal UTTP}$と無順序木$T\in {\cal UT}$.\\
+\textbf{問題}: $t$は$T$にマッチするか?
+\medskip
+
+無順序項木パターン照合問題は，$t$が線形無順序項木パターンであったとしても，次元4以上の変数が存在すればNP完全である\cite{shoudai-ieice2018}．
+一方，全ての変数の次元が2であれば，無順序項木パターン$t\in {\cal UTTP}$と無順序木$T\in {\cal UT}$に対する無順序項木パターン照合問題は，$n$を$t$の頂点数，$N$を$T$の頂点数とするとき，$O(nN^{1.5})$時間で計算可能である\cite{shoudai-ieice2018}．従って，以下に示す線形無順序木パターン$t\in{\cal LUTP}_{\Sigma,\Lambda,X}$に対する無順序項木パターン照合問題は入力サイズの多項式時間で計算可能である．
+
+\medskip
+\noindent
+\textbf{線形無順序木パターン照合問題}(${\cal LUTP}$-${\cal MP}$)\\
+\textbf{入力}: 線形無順序木パターン$t\in {\cal LUTP}$と無順序木$T\in {\cal UT}$.\\
+\textbf{問題}: $t$は$T$にマッチするか?
+\medskip
+
+次に，無順序項木パターン$t\in {\cal UTTP}$に対する無矛盾性問題を次のように定義する．
+
+\medskip
+\noindent
+\textbf{無順序項木パターンに対する無矛盾性問題}(${\cal UTTP}$-${\cal CP}$)\\
+\textbf{入力}: 無順序木の有限集合$S_+\subseteq {\cal UT}_{\Sigma,\Lambda}$と$S_-\subseteq {\cal UT}_{\Sigma,\Lambda}$，ただし$S_+\cap S_-=\emptyset$.\\
+\textbf{問題}: $S_+\subseteq L(t)$かつ$S_-\cap L(t)=\emptyset$を満たす無順序項木パターン$t\in {\cal UTTP}_{\Sigma,\Lambda,X}$は存在するか?
+\medskip
+
+上記問題と同様に，無順序項木パターンを線形無順序項木パターン$t\in {\cal LUTTP}$に限定した\textbf{線形無順序項木パターンに対する無矛盾性問題}(${\cal LUTTP}$-${\cal CP}$)を次のように定める．
+
+\medskip
+\noindent
+\textbf{線形無順序項木パターンに対する無矛盾性問題}(${\cal LUTTP}$-${\cal CP}$)\\
+\textbf{入力}: 無順序木の有限集合$S_+\subseteq {\cal UT}_{\Sigma,\Lambda}$と$S_-\subseteq {\cal UT}_{\Sigma,\Lambda}$，ただし$S_+\cap S_-=\emptyset$.\\
+\textbf{問題}: $S_+\subseteq L(t)$かつ$S_-\cap L(t)=\emptyset$を満たす線形無順序項木パターン$t\in {\cal LUTTP}_{\Sigma,\Lambda,X}$は存在するか?
+\medskip
+
+Miyanoら\cite{miyano-ngc2000}は正則パターンに対して定義された無矛盾性問題がNP完全であることを示した．次章で，${\cal LUTP}$-${\cal CP}$がNP完全であることを証明する．
+
+% 3.2
+\subsection{線形無順序木パターンに対する無矛盾性問題のNP完全性}
+無順序木パターンは葉を子ポートとする次元2の変数しか現れない線形無順序項木パターンである．本章では，無順序木パターンの機械学習，特に二値分類問題に密接に関連する決定問題${\cal LUTP}$-${\cal CP}$がNP完全であることを証明する．
+
+\medskip
+\noindent
+\textbf{線形無順序木パターンに対する無矛盾性問題}(${\cal LUTP}$-${\cal CP}$)\\
+\textbf{入力}: 無順序木の有限集合$S_+\subseteq {\cal UT}_{\Sigma,\Lambda}$と$S_-\subseteq {\cal UT}_{\Sigma,\Lambda}$，ただし$S_+\cap S_-=\emptyset$.\\
+\textbf{問題}: $S_+\subseteq L(t)$かつ$S_-\cap L(t)=\emptyset$を満たす無順序木パターン$t\in {\cal LUTP}_{\Sigma,\Lambda,X}$は存在するか?
+
+以下では，$S_+$に属す無順序木を正例，$S_-$に属す無順序木を負例と呼ぶ．
